@@ -1,0 +1,73 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large or sensitive)
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.geojson
+data/raw/*.shp
+data/raw/*.dbf
+data/raw/*.shx
+*.db
+*.sqlite
+
+# Large processed files
+data/processed/*.pkl
+data/processed/*.h5
+data/processed/*.graphml
+
+# Environment variables (API keys, secrets)
+.env
+.env.local
+config.ini
+secrets.json
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+.AppleDouble
+.LSOverride
+
+# Output files
+*.html
+*.png
+*.jpg
+*.jpeg
+*.pdf
+
+# Model files (if very large)
+*.h5
+*.pkl
+*.joblib
+
+# Logs
+*.log
+logs/
+
+# pytest cache
+.pytest_cache/
+.coverage
+htmlcov/
