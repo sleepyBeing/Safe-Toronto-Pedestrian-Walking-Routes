@@ -76,12 +76,12 @@ htmlcov/
 notebooks/cache/
 cache/
 
-# Processed data (too big for GitHub)
+# processed data (don’t commit large datasets)
 data/processed/
+data/raw/
 *.gpkg
 *.graphml
-*.osm
-*.pbf
-
-# Jupyter
-.ipynb_checkpoints/
+*.parquet
+*.feather
+*.geojson
+*.csv
