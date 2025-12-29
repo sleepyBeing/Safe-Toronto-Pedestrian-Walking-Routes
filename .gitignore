@@ -71,3 +71,17 @@ logs/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# OSMnx / notebooks cache
+notebooks/cache/
+cache/
+
+# Processed data (too big for GitHub)
+data/processed/
+*.gpkg
+*.graphml
+*.osm
+*.pbf
+
+# Jupyter
+.ipynb_checkpoints/
