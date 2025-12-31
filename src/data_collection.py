@@ -16,6 +16,7 @@ def main():
 
     gdf_edges = gdf_edges[gdf_edges["length"] > 0]
 
+# cleaning dataset
     gdf_edges["highway"] = gdf_edges["highway"].astype(str)
     gdf_edges["name"] = gdf_edges["name"].fillna("unnamed")
 
@@ -47,6 +48,7 @@ def main():
 
     print("Saving cleaned data to", out_dir)
 
+# download to /data/processed
     ox.save_graphml(network, f"{out_dir}/toronto_walk.graphml")
 
     gdf_nodes.to_file(
@@ -64,6 +66,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
+    
