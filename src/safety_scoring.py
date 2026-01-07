@@ -2,7 +2,7 @@ import osmnx as ox
 import geopandas as gpd
 import numpy as np
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 from pathlib import Path
 import fiona
 
