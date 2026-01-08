@@ -115,7 +115,7 @@ def a_star_path(graph, source, target, weight="cost"):
         # node with lowest f
         current_f, current = heapq.heappop(open_set)
         
-        # If we reached the target, reconstruct and return the path
+        # If we reached the target, return the path
         if current == target:
             path = []
             while current in came_from:
@@ -124,7 +124,7 @@ def a_star_path(graph, source, target, weight="cost"):
             path.append(source)
             return path[::-1] 
 
-        # Optimization: Skip if we found a better path to this node already
+        # Skip if we found a better path to this node already
         if current_f > f[current]:
             continue
             
@@ -146,7 +146,8 @@ def a_star_path(graph, source, target, weight="cost"):
                 g[neighbor] = tentative_g
                 f[neighbor] = tentative_g + heuristic(graph, neighbor, target)
                 heapq.heappush(open_set, (f[neighbor], neighbor))
-                
+    
+    # under the scenario where no path is found from the origin to the destination, will raise an error
     raise nx.NetworkXNoPath(f"No path between {source} and {target}.")
 
 # A star algorithm implementation
@@ -165,7 +166,7 @@ def route(graph, latitude, longitude, final_latitude, final_longitude, lambd=0.5
     # length-weighted average risk
     avg_risk = float((route_edges["risk"] * route_edges["length"]).sum() / route_edges["length"].sum())
 
-    walk_speed = 1.4 #meters per second
+    walk_speed = 1.4 # meters per second
     
     time_min = distance / walk_speed / 60.0
 
