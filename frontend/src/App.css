@@ -1,0 +1,185 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.sidebar {
+    width: 350px;
+    background: #2a2a2a;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.map-wrapper {
+    flex: 1;
+    position: relative;
+}
+
+/* Controls */
+.control-group {
+    background: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.search-row input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #2a2a2a;
+    color: white;
+}
+
+.search-row button {
+    padding: 0.5rem;
+    background: #555;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-row button:hover {
+    background: #666;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #646cff; /* Vite blue-ish */
+}
+
+h2 {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+.range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.mode-toggle {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.mode-toggle button {
+    flex: 1;
+    padding: 0.5rem;
+    background: #444;
+    border: 1px solid #555;
+    color: #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.mode-toggle button.active {
+    background: #646cff;
+    color: white;
+    border-color: #646cff;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background: #646cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.calculate-btn:hover {
+    background: #535bf2;
+}
+
+.calculate-btn:disabled {
+    background: #444;
+    cursor: not-allowed;
+    color: #888;
+}
+
+.status-indicator {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.status-ok {
+    color: #4caf50;
+}
+.status-waiting {
+    color: #ff9800;
+}
+
+.error-message {
+    color: #f44336;
+    background: #ffebee;
+    padding: 0.5rem;
+    border-radius: 4px;
+    color: #d32f2f;
+}
+
+.results {
+    background: #2e3b2f;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #4caf50;
+}

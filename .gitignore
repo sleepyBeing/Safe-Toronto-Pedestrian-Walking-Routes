@@ -42,7 +42,6 @@ secrets.json
 *.swp
 *.swo
 *~
-.DS_Store
 
 # OS files
 .DS_Store
@@ -85,3 +84,9 @@ data/raw/
 *.feather
 *.geojson
 *.csv
+
+# Node.js
+node_modules/
+frontend_src_backup/
+dist/
+build/
